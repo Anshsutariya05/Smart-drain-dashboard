@@ -87,7 +87,7 @@ export function WeatherWidget({ designVariant }: WeatherWidgetProps) {
   const getDrainageImpact = () => {
     if (!weather) return null
 
-    if (weather.description.includes("rain")) {
+    if (weather.description?.includes("rain")) {
       return { level: "high", message: "Heavy drainage expected", color: "text-red-600" }
     } else if (weather.humidity > 80) {
       return { level: "medium", message: "Moderate drainage likely", color: "text-yellow-600" }
