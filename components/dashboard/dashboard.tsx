@@ -50,7 +50,7 @@ export default function Dashboard({ user }: DashboardProps) {
         const response = await fetch("http://localhost:8000/data")
         if (response.ok) {
           const iotData: IoTDataResponse = await response.json()
-          console.log("[v0] Received IoT data:", iotData)
+          // console.log("[v0] Received IoT data:", iotData)
 
           if (iotData.latest && iotData.latest.distance !== undefined && iotData.latest.motor && iotData.latest.ts) {
             const newReading: SensorData = {

@@ -21,7 +21,7 @@ interface WeatherWidgetProps {
 
 export function WeatherWidget({ designVariant }: WeatherWidgetProps) {
   const [weather, setWeather] = useState<WeatherData | null>(null)
-  const [city, setCity] = useState("New York")
+  const [city, setCity] = useState("Ahemdabad")
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
